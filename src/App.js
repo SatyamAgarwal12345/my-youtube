@@ -6,6 +6,7 @@ function App() {
     <div className="bg-red-800">
      hiii
      byee
+     hello
     </div>
   );
 }
