@@ -2,8 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils2/store/appSlice";
 import { useSearchParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const WatchPage = () => {
+  const toggleMenu = useSelector(store=>store.app.isMenuOpen)
+  //Giving some margin right if the toggle menu is visible otherwise no margin right
+  const style = toggleMenu ? { marginLeft: '200px' } : {};
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
@@ -12,7 +16,7 @@ const WatchPage = () => {
   const [searchParams] = useSearchParams();
   const vid = searchParams.get("v");
   return (
-    <div className="p-4">
+    <div className="p-4 " style={style}>
       <iframe
         width="950"
         height="450"

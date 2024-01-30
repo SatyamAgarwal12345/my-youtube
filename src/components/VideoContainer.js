@@ -22,10 +22,10 @@ const VideoContainer = () => {
   };
   if (!videos) return <Shimmer/>;
   return (
-    <div className=" flex flex-wrap">
+    <div className=" flex flex-wrap ">
       {videos.map((info, index) => (
-        <Link to={"/watch?v=" + info.id}>
-          <VideoCard key={index} info={info} />
+        <Link  key={index} to={"/watch?v=" + info.id}>
+          <VideoCard  info={info} />
         </Link>
       ))}
     </div>

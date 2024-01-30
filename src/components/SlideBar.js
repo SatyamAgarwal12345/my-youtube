@@ -7,7 +7,7 @@ const SlideBar = () => {
   //togelling slidebar bar based on store  value of isMenuOpen 
   if(!toggleMenu) return 
   return (
-    <div className="shadow-2xl w-48 pl-5 pr-8">
+    <div className="shadow-2xl w-48 pl-5 pr-8 fixed top-16">
       <ul className="mt-2">
         <Link to={'/'}><li>Home</li></Link>
         
